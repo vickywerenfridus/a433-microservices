@@ -8,9 +8,11 @@ services:
       restart: on-failure
 
    item-app:
-      image: ghcr.io/vickywerenfridus/item-app:v1
+      image: cungkriink/item-app:v1
       ports:
          - 80:8080
       restart: on-failure
+      depends_on:
+         - item-db
 volumes:
    app-db:
