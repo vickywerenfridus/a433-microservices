@@ -1,0 +1,18 @@
+version: "3.7"
+
+services:
+   item-app:
+      container-name: item-app
+      image: cungkriink/item-app:v1
+      ports:
+         - 80:8080
+      restart: on-failure
+
+   item-db:
+      container-name: item-db
+      image: mongo:3
+      volumes:
+         - app-db:/data/db
+      restart: on-failure
+volumes:
+   app-db:
