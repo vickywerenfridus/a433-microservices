@@ -13,7 +13,7 @@ docker push cungkriink/item-app:v1
 # Mengubah nama sesuai dengan repository di Github Package
 docker tag item-app:v1 ghcr.io/vickywerenfridus/item-app:v1
 # Login ke akun Github menggunakan username dan access token
-export ACCESS_TOKEN_GITHUB=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
+export ACCESS_TOKEN_GITHUB=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
 echo $ACCESS_TOKEN_GITHUB | docker login ghcr.io -u vickywerenfridus --password-stdin
 # mengunggah image yang telah dibuat ke Github Package
 docker push ghcr.io/vickywerenfridus/item-app:v1
